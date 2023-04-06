@@ -1,4 +1,4 @@
-module github.com/sanxia/goauth
+module github.com/foundVanting/goauth
 
 go 1.16
 

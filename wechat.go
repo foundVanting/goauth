@@ -15,7 +15,7 @@ type (
 		Oauth
 	}
 
-    //微信访问Token信息响应结构
+	//微信访问Token信息响应结构
 	WeChatAccessTokenResponse struct {
 		ErrCode      string `form:"errcode" json:"errcode"`
 		ErrMsg       string `form:"errmsg" json:"errmsg"`
@@ -243,6 +243,7 @@ func (s *OauthWeChat) GetUserInfo(accessToken, openId string) (*OauthUser, error
 
 				Token: &OauthToken{
 					UnionId: userInfoResponse.UnionId,
+					OpenId:  userInfoResponse.OpenId,
 				},
 			}
 		}
